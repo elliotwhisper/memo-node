@@ -1,0 +1,10 @@
+{
+    "name": "memo-node",
+    "description": "A simple memo website.",
+    "repository": "https://github.com/elliotwhisper/memo-node",
+    "dependencies" : {
+	"express": "latest",
+	"sqlite3": "latest"
+    },
+    "license": "MIT"
+}
