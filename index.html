@@ -1,9 +1,27 @@
 <html>
     <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Memo</title>
+	<script>
+	 function submit(){
+	     var memo = document.getElementById('memo').value;
+	     var xhr = new XMLHttpRequest();
+	     xhr.open('POST', '/', true);
+	     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	     xhr.onreadystatechange = function(){
+		 var x = xhr;
+		 if (x.readyState == 4){
+		     if (x.status == 200){
+			 document.getElementById('memo').value = '';
+		     }
+		 }
+	     };
+	     xhr.send('memo=' + memo);
+	 };
+	</script>
     </head>
     <body>
-	Hello world.
+	<div><input type="text" id="memo" name="memo" style="width: 80%;" /><input id="button" type="button" value="Memo" onclick="submit()" style="float: right;" /></div>
     </body>
 </html>
 

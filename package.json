@@ -4,6 +4,7 @@
     "repository": "https://github.com/elliotwhisper/memo-node",
     "dependencies" : {
 	"express": "latest",
+	"body-parser": "latest",
 	"sqlite3": "latest"
     },
     "license": "MIT"

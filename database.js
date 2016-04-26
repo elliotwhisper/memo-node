@@ -26,8 +26,4 @@ Database.prototype.allMemo = function(callback){
     this._db.all('select * from memo', callback);
 }
 
-Database.prototype.colse = function(){
-    this._db.close();
-};
-
 module.exports = Database;
